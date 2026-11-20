@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Study Planner</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <h1>My Study Planner</h1>
+            <p>University • Focus • Discipline • Balance</p>
+        </div>
+
+        <button id="themeToggle">🌙 Dark Mode</button>
+    </header>
+
+    <main>
+
+        <section class="dashboard">
+
+            <div class="stat-card">
+                <h3>Mathematics 1</h3>
+                <p id="mathHours">0 / 4.5 hrs</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Mechanics</h3>
+                <p id="mechanicsHours">0 / 6 hrs</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Programming</h3>
+                <p id="programmingHours">0 / 6 hrs</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>EE1</h3>
+                <p id="eeHours">0 / 6 hrs</p>
+            </div>
+
+        </section>
+
+        <section class="planner">
+
+            <div class="planner-heading">
+    <h2>Weekly Timetable</h2>
+
+    <button id="addActivity">
+        + Add Activity
+    </button>
+</div>
+
+<!-- ADD ACTIVITY FORM -->
+
+<section class="activity-form" id="activityForm">
+
+    <h3>Add New Activity</h3>
+
+    <label>Activity Name</label>
+    <input type="text" id="activityTitle" placeholder="e.g. Mathematics Study">
+
+    <label>Day</label>
+    <select id="activityDay">
+        <option value="">Select a day</option>
+        <option>Monday</option>
+        <option>Tuesday</option>
+        <option>Wednesday</option>
+        <option>Thursday</option>
+        <option>Friday</option>
+        <option>Saturday</option>
+        <option>Sunday</option>
+    </select>
+
+    <label>Time</label>
+    <input type="text" id="activityTime" placeholder="e.g. 14:00 - 16:00">
+
+    <label>Activity Type</label>
+    <select id="activityType">
+        <option value="lecture">Lecture</option>
+        <option value="study">Study</option>
+        <option value="sport">Sport</option>
+        <option value="personal">Personal</option>
+    </select>
+
+    <div id="studyFields">
+        <label>Course</label>
+        <select id="activityCourse">
+            <option>Mathematics 1</option>
+            <option>Mechanics</option>
+            <option>Programming</option>
+            <option>EE1</option>
+        </select>
+
+        <label>Study Duration (hours)</label>
+        <input type="number" id="activityHours" min="0.5" step="0.5">
+    </div>
+
+    <button id="saveActivity">Save Activity</button>
+    <button id="cancelActivity">Cancel</button>
+
+</section>
+
+            <div class="week-grid" id="weekGrid">
+
+                <div class="day-column" id="Monday">
+                    <h3>Monday</h3>
+                </div>
+
+                <div class="day-column" id="Tuesday">
+                    <h3>Tuesday</h3>
+                </div>
+
+                <div class="day-column" id="Wednesday">
+                    <h3>Wednesday</h3>
+                </div>
+
+                <div class="day-column" id="Thursday">
+                    <h3>Thursday</h3>
+                </div>
+
+                <div class="day-column" id="Friday">
+                    <h3>Friday</h3>
+                </div>
+
+                <div class="day-column" id="Saturday">
+                    <h3>Saturday</h3>
+                </div>
+
+                <div class="day-column" id="Sunday">
+                    <h3>Sunday</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,279 @@
+
+/* GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #101827;
+    color: #ffffff;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.header h1 {
+    font-size: 30px;
+    color: #60a5fa;
+}
+
+.header p {
+    color: #94a3b8;
+    margin-top: 6px;
+}
+
+button {
+    border: none;
+    padding: 11px 17px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    background: #2563eb;
+    color: white;
+    transition: 0.2s;
+}
+
+button:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+/* DASHBOARD */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.stat-card {
+    background: #1e293b;
+    padding: 22px;
+    border-radius: 12px;
+    border-left: 4px solid #3b82f6;
+}
+
+.stat-card h3 {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.stat-card p {
+    font-size: 23px;
+    font-weight: bold;
+    color: #60a5fa;
+}
+
+/* PLANNER */
+
+.planner {
+    background: #172235;
+    padding: 22px;
+    border-radius: 14px;
+}
+
+.planner-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.planner-heading h2 {
+    font-size: 22px;
+}
+
+/* WEEKLY GRID */
+
+.week-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(150px, 1fr));
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+}
+
+.day-column {
+    background: #1e293b;
+    padding: 12px;
+    border-radius: 10px;
+    min-height: 300px;
+}
+
+.day-column h3 {
+    color: #60a5fa;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #334155;
+}
+
+/* ACTIVITY CARDS */
+
+.activity {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    border-left: 4px solid;
+}
+
+.activity h4 {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.activity p {
+    color: #e2e8f0;
+    line-height: 1.5;
+}
+
+/* ACTIVITY COLOURS */
+
+.lecture {
+    background: #1e3a5f;
+    border-color: #3b82f6;
+}
+
+.study {
+    background: #493719;
+    border-color: #f59e0b;
+}
+
+.sport {
+    background: #3b245b;
+    border-color: #a855f7;
+}
+
+.personal {
+    background: #334155;
+    border-color: #94a3b8;
+}
+
+/* COMPLETED ACTIVITY */
+
+.activity.completed {
+    opacity: 0.45;
+    text-decoration: line-through;
+}
+
+/* LIGHT MODE */
+
+body.light-mode {
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.light-mode .planner,
+.light-mode .stat-card,
+.light-mode .day-column {
+    background: #ffffff;
+}
+
+.light-mode .stat-card h3 {
+    color: #64748b;
+}
+
+.light-mode .activity p {
+    color: #1e293b;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .header {
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .week-grid {
+        grid-template-columns: repeat(7, 160px);
+    }
+}
+
+/* ADD ACTIVITY FORM */
+
+.activity-form {
+    display: none;
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.activity-form.show {
+    display: block;
+}
+
+.activity-form h3 {
+    margin-bottom: 20px;
+    color: #60a5fa;
+}
+
+.activity-form label {
+    display: block;
+    margin: 12px 0 6px;
+    color: #cbd5e1;
+}
+
+.activity-form input,
+.activity-form select {
+    width: 100%;
+    padding: 11px;
+    border-radius: 7px;
+    border: 1px solid #475569;
+    background: #0f172a;
+    color: white;
+    margin-bottom: 10px;
+}
+
+#cancelActivity {
+    background: #64748b;
+}
+
+#studyFields {
+    margin-bottom: 15px;
+}
+
+.light-mode .activity-form {
+    background: #ffffff;
+}
+
+.light-mode .activity-form label {
+    color: #334155;
+}
+
+.light-mode .activity-form input,
+.light-mode .activity-form select {
+    background: #f1f5f9;
+    color: #1e293b;
+}
